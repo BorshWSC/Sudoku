@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.MainMenu">
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="Начать"
+        android:textSize="40sp"
+        android:paddingHorizontal="30dp"
+
+        />
+
+    <Button
+        android:id="@+id/lowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/startButton"
+        android:layout_marginTop="15dp"
+        android:text="Легкая"
+        android:textSize="30sp"
+        android:paddingHorizontal="30dp"
+        android:visibility="invisible"
+        />
+    <Button
+        android:id="@+id/mediumButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/lowButton"
+        android:layout_marginTop="15dp"
+        android:text="Средняя"
+        android:textSize="30sp"
+        android:paddingHorizontal="20dp"
+        android:visibility="invisible"
+
+        />
+    <Button
+        android:id="@+id/highButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/mediumButton"
+        android:layout_marginTop="15dp"
+        android:text="Сложная"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/testButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/highButton"
+        android:layout_marginTop="15dp"
+        android:text="Тест"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

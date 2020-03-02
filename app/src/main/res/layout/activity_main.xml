@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.PlaySudokuActivity">
+
+    <ru.tpu.msk30.sudoku.view.custom.SudokuBoardView
+        android:id="@+id/sudokuBoardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            />
+
+        <TextView
+            android:id="@+id/textHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/deleteButton"
+            android:layout_above="@id/oneButton"
+            android:layout_marginBottom="30dp"
+            android:text="Осталось подсказок: "
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/textLive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/deleteButton"
+            android:layout_above="@id/oneButton"
+            android:layout_marginBottom="10dp"
+            android:text="Осталось попыток: "
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/textHintNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textHint"
+            android:layout_above="@id/oneButton"
+            android:layout_marginBottom="30dp"
+            android:text="3"
+            android:textColor="@android:color/black"
+            />
+        <TextView
+            android:id="@+id/textLiveNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textLive"
+            android:layout_above="@id/oneButton"
+            android:layout_marginBottom="10dp"
+            android:text="3"
+            android:textColor="@android:color/black"
+            />
+
+        <ImageButton
+            android:id="@+id/notesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/deleteButton"
+            android:minWidth="88dp"
+            android:minHeight="48dp"
+            android:layout_marginLeft="80dp"
+            app:srcCompat="@drawable/edit_pen_black" />
+
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="88dp"
+            android:minHeight="48dp"
+            android:layout_marginBottom="65dp"
+            app:srcCompat="@drawable/delete_black" />
+
+        <ImageButton
+            android:id="@+id/hintButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="88dp"
+            android:minHeight="48dp"
+            android:layout_below="@id/notesButton"
+            android:layout_alignLeft="@id/notesButton"
+            app:srcCompat="@drawable/hint_black" />
+
+
+
+        <Button
+            android:id="@+id/oneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_below="@id/deleteButton"
+            />
+
+        <Button
+            android:id="@+id/twoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:layout_toRightOf="@id/oneButton"
+            android:layout_below="@id/deleteButton"
+
+            />
+
+        <Button
+            android:id="@+id/threeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:layout_toRightOf="@id/twoButton"
+            android:layout_below="@id/deleteButton"
+
+            />
+
+        <Button
+            android:id="@+id/fourButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:layout_below="@id/oneButton"
+            />
+
+        <Button
+            android:id="@+id/fiveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_below="@id/twoButton"
+            android:layout_toRightOf="@id/fourButton"
+            />
+
+        <Button
+            android:id="@+id/sixButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:layout_below="@id/threeButton"
+            android:layout_toRightOf="@id/fiveButton"
+            />
+
+        <Button
+            android:id="@+id/sevenButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:layout_below="@id/fourButton"
+            />
+
+        <Button
+            android:id="@+id/eightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:layout_below="@id/fiveButton"
+            android:layout_toRightOf="@id/sevenButton"
+            />
+
+        <Button
+            android:id="@+id/nineButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:layout_below="@id/sixButton"
+            android:layout_toRightOf="@id/eightButton"
+            android:layout_marginBottom="25dp"
+            />
+
+</RelativeLayout>
+
+</RelativeLayout>
+
