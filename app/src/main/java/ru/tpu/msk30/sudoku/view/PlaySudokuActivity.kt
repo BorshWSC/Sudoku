@@ -110,6 +110,13 @@ class PlaySudokuActivity : AppCompatActivity(), SudokuBoardView.OnTouchListener 
                 var intent: Intent = Intent(this, EndOfGameActivity::class.java)
 
                 intent.putExtra("time", SystemClock.elapsedRealtime() - chronometer.base)
+                val difficulty = when(difficultuLevel.currentLevel){
+                    0 -> "Низкий"
+                    1 -> "Средний"
+                    2 -> "Сложный"
+                    else -> "Тест"
+                }
+                intent.putExtra("difficulty", difficulty)
                 startActivity(intent)
             }
         }

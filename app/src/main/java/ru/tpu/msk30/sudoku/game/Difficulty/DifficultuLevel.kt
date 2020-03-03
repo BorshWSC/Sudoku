@@ -15,6 +15,7 @@ interface DifficultuLevel {
     }
 
     val defoultCount: Int
+    val currentLevel: Int
 
     fun chooseDifficultyLevel(board: Board, count: Int = defoultCount): List<Cell> {
         var cells: List<Cell> = board.cells

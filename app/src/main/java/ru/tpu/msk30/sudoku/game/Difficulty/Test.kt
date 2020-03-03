@@ -6,6 +6,8 @@ import ru.tpu.msk30.sudoku.game.Cell
 class Test:DifficultuLevel {
 
     override val defoultCount: Int = 1
+    override val currentLevel: Int
+        get() = 3
 
 
     override fun chooseDifficultyLevel(board: Board, count: Int): List<Cell> {

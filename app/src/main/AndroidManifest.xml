@@ -10,7 +10,7 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".view.ResultActivity"></activity>
         <activity android:name=".view.EndOfGameActivity" />
         <activity android:name=".view.MainMenu">
             <intent-filter>
