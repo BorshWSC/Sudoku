@@ -1,0 +1,6 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@+id/serialNumberCol" android:text="" />
+    <TextView android:id="@+id/nameCol" android:text="" />
+    <TextView android:id="@+id/timeCol" android:text="" />
+    <TextView android:id="@+id/difficultyCol" android:text="" />
+</TableRow>

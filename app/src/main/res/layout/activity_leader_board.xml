@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LeaderBoard">
+
+
+    <RadioGroup
+        android:id="@+id/difficultiesRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/lowDifficultyRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Легая"
+            android:textSize="22sp"
+            android:onClick="onRadioButtonClick"/>
+
+        <RadioButton
+            android:id="@+id/mediumDifficultyRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Средняя"
+            android:textSize="22sp"
+            android:onClick="onRadioButtonClick"/>
+
+        <RadioButton
+            android:id="@+id/highDifficultyRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сложная"
+            android:textSize="22sp"
+            android:onClick="onRadioButtonClick"/>
+
+        <RadioButton
+            android:id="@+id/testDifficultyRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Тест"
+            android:textSize="22sp"
+            android:onClick="onRadioButtonClick"/>
+
+    </RadioGroup>
+
+    <TableLayout
+        android:id="@+id/leaderBoardTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below = "@id/difficultiesRadioGroup">
+    </TableLayout>
+
+</RelativeLayout>

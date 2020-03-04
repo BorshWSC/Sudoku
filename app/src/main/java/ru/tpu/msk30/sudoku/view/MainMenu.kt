@@ -1,16 +1,14 @@
 package ru.tpu.msk30.sudoku.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.RelativeLayout
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main_menu.*
 import ru.tpu.msk30.sudoku.R
-import ru.tpu.msk30.sudoku.game.Difficulty.DifficultuLevel
-import ru.tpu.msk30.sudoku.game.Difficulty.HighDifficulty
-import ru.tpu.msk30.sudoku.game.Difficulty.LowDifficulty
-import ru.tpu.msk30.sudoku.game.Difficulty.MediumDifficulty
+
 
 class MainMenu : AppCompatActivity() {
 
@@ -40,6 +38,21 @@ class MainMenu : AppCompatActivity() {
                 button.visibility = change
             }
             isButtonVisible = !isButtonVisible
+            val editButtonParams = RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+            )
+
+            editButtonParams.addRule(RelativeLayout.BELOW, R.id.testButton)
+            mainMenuLayout.removeView(leaderBoardButton)
+            mainMenuLayout.addView(leaderBoardButton, editButtonParams)
+        }
+
+        leaderBoardButton.setOnClickListener {
+
+            val intent = Intent(this, LeaderBoard::class.java)
+            startActivity(intent)
+
         }
     }
 }

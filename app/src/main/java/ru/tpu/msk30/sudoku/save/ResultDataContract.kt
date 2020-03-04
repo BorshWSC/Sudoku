@@ -15,8 +15,8 @@ object ResultDataContract {
         "CREATE TABLE ${ResultDataEntry.TABLE_NAME} (" +
                 "${BaseColumns._ID} INTEGER PRIMARY KEY," +
                 "${ResultDataEntry.COLUMN_NAME_USER_NAME} TEXT," +
-                "${ResultDataEntry.COLUMN_NAME_TIME} INTEGER)," +
-                "${ResultDataEntry.COLUMN_NAME_DIFFICULTY} TEXT "
+                "${ResultDataEntry.COLUMN_NAME_TIME} INTEGER," +
+                "${ResultDataEntry.COLUMN_NAME_DIFFICULTY} TEXT) "
 
     const val SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS ${ResultDataEntry.TABLE_NAME}"
 }

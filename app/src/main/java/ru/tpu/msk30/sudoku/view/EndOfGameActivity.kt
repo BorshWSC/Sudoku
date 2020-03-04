@@ -1,7 +1,7 @@
 package ru.tpu.msk30.sudoku.view
 
 import android.content.ContentValues
-import android.content.RestrictionEntry
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_end_of_game.*
@@ -31,7 +31,9 @@ class EndOfGameActivity : AppCompatActivity() {
 
             val newRowId = db?.insert(ResultDataContract.ResultDataEntry.TABLE_NAME, null, values)
 
-
+            val newIntent = Intent(this, ResultActivity::class.java)
+            newIntent.putExtra("difficulty", intent.getStringExtra("difficulty")?.toString())
+            startActivity(newIntent)
         }
     }
 }
